@@ -1,0 +1,23 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_text_formatted_summary
+    - node.type.team_member
+  module:
+    - text
+id: node.team_member.field_text_formatted_summary
+field_name: field_text_formatted_summary
+entity_type: node
+bundle: team_member
+label: Biography
+description: 'Optional biography. The summary is shown on cards.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+  allowed_formats: {  }
+field_type: text_with_summary

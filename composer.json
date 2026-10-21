@@ -1,0 +1,11 @@
+{
+    "name": "drupal/team_recipe",
+    "description": "Provides a Team member content type (staff, board of directors) with a team block.",
+    "type": "drupal-recipe",
+    "license": "GPL-2.0-or-later",
+    "require": {
+        "drupal/core": "^11",
+        "drupal/field_group": "^3.6 || ^4",
+        "drupal/pathauto": "^1.12"
+    }
+}

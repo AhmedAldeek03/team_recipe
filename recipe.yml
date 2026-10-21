@@ -1,0 +1,40 @@
+name: Team
+description: 'Provides a Team member content type (staff, board of directors) with a team block.'
+type: 'Content type'
+recipes:
+  - core/recipes/image_media_type
+  - core/recipes/content_editor_role
+install:
+  - datetime
+  - field_group
+  - link
+  - media_library
+  - node
+  - path
+  - pathauto
+  - taxonomy
+  - text
+  - views
+config:
+  strict:
+    - field.storage.node.field_link
+    - field.storage.node.field_media
+    - field.storage.node.field_page_url
+    - field.storage.node.field_term
+    - field.storage.node.field_text
+    - field.storage.node.field_text_formatted_summary
+  import:
+    node:
+      - core.entity_view_mode.node.full
+    image:
+      - image.style.medium
+  actions:
+    user.role.content_editor:
+      grantPermissions:
+        - 'create team_member content'
+        - 'edit own team_member content'
+        - 'edit any team_member content'
+        - 'delete own team_member content'
+        - 'delete any team_member content'
+        - 'view team_member revisions'
+        - 'revert team_member revisions'

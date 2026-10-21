@@ -1,0 +1,54 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.card
+    - field.field.node.team_member.field_link
+    - field.field.node.team_member.field_media
+    - field.field.node.team_member.field_page_url
+    - field.field.node.team_member.field_term
+    - field.field.node.team_member.field_text
+    - field.field.node.team_member.field_text_formatted_summary
+    - image.style.medium
+    - node.type.team_member
+  module:
+    - media
+    - text
+    - user
+id: node.team_member.card
+targetEntityType: node
+bundle: team_member
+mode: card
+content:
+  field_media:
+    type: media_thumbnail
+    label: hidden
+    settings:
+      image_link: content
+      image_style: medium
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_text:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_text_formatted_summary:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 200
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden:
+  field_link: true
+  field_page_url: true
+  field_term: true
+  links: true

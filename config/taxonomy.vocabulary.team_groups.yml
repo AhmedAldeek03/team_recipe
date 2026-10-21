@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+name: 'Team groups'
+vid: team_groups
+description: 'For example "Board of directors" or "Staff".'
+weight: 0
+new_revision: false

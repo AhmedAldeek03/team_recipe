@@ -1,0 +1,26 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.team_member
+  module:
+    - node
+  enforced:
+    config:
+      - node.type.team_member
+id: team_member_content
+label: 'Team member content'
+type: 'canonical_entities:node'
+pattern: '/team/[node:field_page_url]'
+selection_criteria:
+  ea619e65-971d-4a5a3-a7a6c-bd959aa20988:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: ea619e65-971d-4a5a3-a7a6c-bd959aa20988
+    context_mapping:
+      node: node
+    bundles:
+      team_member: team_member
+selection_logic: and
+weight: -5
+relationships: {  }
