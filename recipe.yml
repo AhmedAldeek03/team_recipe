@@ -7,28 +7,43 @@ recipes:
 install:
   - datetime
   - field_group
+  - length_indicator
   - link
   - media_library
+  - media_library_edit
+  - metatag
   - node
   - path
   - pathauto
   - taxonomy
   - text
   - views
+  - yoast_seo
 config:
   strict:
+    - field.storage.node.field_body
     - field.storage.node.field_link
     - field.storage.node.field_media
+    - field.storage.node.field_meta_tags
     - field.storage.node.field_page_url
+    - field.storage.node.field_plain_text
+    - field.storage.node.field_seo_analysis
+    - field.storage.node.field_seo_description
+    - field.storage.node.field_seo_image
+    - field.storage.node.field_seo_title
     - field.storage.node.field_term
-    - field.storage.node.field_text
-    - field.storage.node.field_text_formatted_summary
   import:
     node:
       - core.entity_view_mode.node.full
     image:
       - image.style.medium
   actions:
+    # The SEO tab covers title, description and image, so the Meta tags field
+    # only offers the advanced tags (robots, canonical URL).
+    metatag.settings:
+      simpleConfigUpdate:
+        entity_type_groups.node.team_member:
+          advanced: advanced
     user.role.content_editor:
       grantPermissions:
         - 'create team_member content'

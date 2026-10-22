@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_meta_tags
+    - node.type.team_member
+  module:
+    - metatag
+id: node.team_member.field_meta_tags
+field_name: field_meta_tags
+entity_type: node
+bundle: team_member
+label: 'Meta tags'
+description: 'Advanced settings, such as hiding this page from search engines.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: metatag

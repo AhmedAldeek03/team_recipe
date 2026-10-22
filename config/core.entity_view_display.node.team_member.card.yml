@@ -7,8 +7,8 @@ dependencies:
     - field.field.node.team_member.field_media
     - field.field.node.team_member.field_page_url
     - field.field.node.team_member.field_term
-    - field.field.node.team_member.field_text
-    - field.field.node.team_member.field_text_formatted_summary
+    - field.field.node.team_member.field_plain_text
+    - field.field.node.team_member.field_body
     - image.style.medium
     - node.type.team_member
   module:
@@ -31,7 +31,7 @@ content:
     third_party_settings: {  }
     weight: 0
     region: content
-  field_text:
+  field_plain_text:
     type: string
     label: hidden
     settings:
@@ -39,7 +39,7 @@ content:
     third_party_settings: {  }
     weight: 1
     region: content
-  field_text_formatted_summary:
+  field_body:
     type: text_summary_or_trimmed
     label: hidden
     settings:

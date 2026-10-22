@@ -6,6 +6,10 @@
     "require": {
         "drupal/core": "^11",
         "drupal/field_group": "^3.6 || ^4",
-        "drupal/pathauto": "^1.12"
+        "drupal/length_indicator": "^1.4",
+        "drupal/media_library_edit": "^3.0",
+        "drupal/metatag": "^2.2",
+        "drupal/pathauto": "^1.12",
+        "drupal/yoast_seo": "^2.2"
     }
 }
